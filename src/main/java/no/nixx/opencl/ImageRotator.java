@@ -17,8 +17,8 @@ public class ImageRotator {
     @SuppressWarnings("unused")
     public enum Rotation {
         CW_90(90),
-        FLIP(180),
-        CCW_90(270);
+        CCW_90(270),
+        FLIP(180);
 
         public final int angle;
 
