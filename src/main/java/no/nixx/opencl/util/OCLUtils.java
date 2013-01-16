@@ -83,9 +83,9 @@ public class OCLUtils {
         return clCreateContext(contextProperties, 1, new cl_device_id[]{deviceId}, null, null, null);
     }
 
-    public static cl_command_queue getCommandQueueForContextAndPlatformIdAndDeviceId(final cl_context context, cl_platform_id platformId, cl_device_id deviceId) {
+    public static cl_command_queue getCommandQueueForContextAndPlatformIdAndDeviceId(final cl_context context, cl_device_id deviceId) {
         long properties = 0;
-//        properties |= CL_QUEUE_PROFILING_ENABLE;
+        properties |= CL_QUEUE_PROFILING_ENABLE;
         properties |= CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE;
 
         return clCreateCommandQueue(context, deviceId, properties, null);

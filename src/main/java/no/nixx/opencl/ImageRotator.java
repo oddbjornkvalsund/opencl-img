@@ -37,7 +37,7 @@ public class ImageRotator {
         platformId = getFirstPlatformId();
         deviceId = getFirstDeviceIdForPlatformId(platformId);
         context = getContextForPlatformIdAndDeviceId(platformId, deviceId);
-        commandQueue = getCommandQueueForContextAndPlatformIdAndDeviceId(context, platformId, deviceId);
+        commandQueue = getCommandQueueForContextAndPlatformIdAndDeviceId(context, deviceId);
         program = createProgramFromSource(context, ClasspathUtils.getClasspathResourceAsString("rotate.cl"));
     }
 
